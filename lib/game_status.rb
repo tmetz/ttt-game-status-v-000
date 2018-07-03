@@ -37,3 +37,11 @@ def full?(board)
     position_taken?(board, each_space)
   end
 end
+
+def draw?(board)
+  if full?(board) && !won?(board)
+    return true
+  else
+    return false
+  end
+end
