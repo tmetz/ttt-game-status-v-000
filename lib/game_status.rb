@@ -33,7 +33,7 @@ def won?(board)
 end
 
 def full?(board)
-  is_full = board.all? do |each_space}
+  is_full = board.all? do |each_space|
     each_space.position_taken?
   end
 end
