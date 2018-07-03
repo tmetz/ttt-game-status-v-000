@@ -36,5 +36,4 @@ def full?(board)
   is_full = [0,1,2,3,4,5,6,7,8].all? do |each_space|
     position_taken?(board, each_space)
   end
-  return is_full
 end
