@@ -15,3 +15,18 @@ WIN_COMBINATIONS = [
   [0,4,8], # Diagonal top-left to bottom-right
   [2,4,6] # Diagonal top-right to bottom-left
 ]
+
+def won?(board)
+  WIN_COMBINATIONS.each do |current_combo|
+    position_1 = board[current_combo[0]]
+    position_2 = board[current_combo[1]]
+    position_3 = board[current_combo[2]]
+    if position_1 == "X" && position_2 == "X" && position_3 == "X"
+      return current_combo
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+      return current_combo
+    else
+      false
+    end
+  end
+end
